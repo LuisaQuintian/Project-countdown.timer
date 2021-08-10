@@ -1,7 +1,7 @@
 
 function countdown() {
     //1 - define final date
-    let date = new Date('2021-08-12')
+    let date = new Date('2021-08-11')
 
     // //2 - get current date
     const currentDate = new Date()
@@ -14,7 +14,7 @@ function countdown() {
     const totalseconds = parseInt(result/1000)
     const seconds = parseInt(totalseconds) % 60
     const minutes = parseInt(totalseconds/60) % 60
-    const hours = parseInt(totalseconds/3600) % 24
+    const hours = (parseInt(totalseconds/3600) % 24) + 3 //timezone compensation
     const days = parseInt(totalseconds/3600/24)
 
     //5- link js with html
