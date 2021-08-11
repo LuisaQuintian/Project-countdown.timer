@@ -14,13 +14,13 @@
     <div class="cloud">
         <div class="form">
             <h2>What are you looking foward to?</h2>
-            <form>
-                <div>
-                    <label for="event">Event</label>
-                    <input type="text" name="event" id="event">
+            <form class="inputsAndButtons">
+                <div class="event">
+                    <label for="event">Event:</label>
+                    <input type="text" name="event" id="event" placeholder="Event, day, celebration...">
                 </div>
-                <div>
-                    <label for="date">Date</label>
+                <div class="date">
+                    <label for="date">Date:</label>
                     <input type="date" name="date" id="date">
                 </div>
 
@@ -32,7 +32,7 @@
     <main>
         <header class="hidden">
             <h1>- countdown to -</h1>
-            <h2 id="event">PATINS</h2>
+            <h2 id="event.display">PATINS</h2>
         </header>
         <main>
             <section class="countdown-container hidden">
