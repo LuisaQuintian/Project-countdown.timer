@@ -1,7 +1,32 @@
+let formDate
+
+function save(event){
+
+    event.preventDefault()
+
+     //1 - get the event and date from the inputs
+    let formEvent = document.getElementById('event').value
+    formDate = document.getElementById('date').value
+
+    //2 - check if all the inputs were filled
+    if(formEvent === "" || formDate === "") {
+        alert("Por favor preencha todos os campos")
+        return /*ARRUMAR*/
+    }
+
+    //3 - tranfer the data for the html and js
+    document.getElementById('event-title').innerHTML=`${formEvent}`
+
+ 
+    //4 - close the form and reveal the counter
+    document.querySelector('.cloud').classList.add('hidden')
+    document.querySelector('.counter').classList.remove('hidden')
+
+}
 
 function countdown() {
     //1 - define final date
-    let date = new Date('2021-08-11')
+    let date = new Date(formDate)
 
     // //2 - get current date
     const currentDate = new Date()
@@ -27,5 +52,12 @@ function countdown() {
 
 countdown()
 
+setInterval(countdown, 1000); //Isso aqui vai repetir uma função em determinado intervalo de tempo, entre parenteses, primeiro vai o nome da função e depois o intervalo de tempo em milissegundos.(1000milissegundos = 1seg)
 
-setInterval(countdown, 1000); //Isso aqui vai repetir uma função em determinado intervalo de tempo, entre parenteses, primieiro vai e o nome da função e depois o intervalo de tempo em milissegundos.(1000-milissegundos = 1seg)
+
+
+
+
+    
+
+

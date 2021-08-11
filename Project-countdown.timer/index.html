@@ -11,10 +11,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="cloud">
+    <div class="cloud toggled">
         <div class="form">
             <h2>What are you looking foward to?</h2>
-            <form class="inputsAndButtons">
+            <form class="inputsAndButtons" action="" onsubmit="save(event)">
                 <div class="event">
                     <label for="event">Event:</label>
                     <input type="text" name="event" id="event" placeholder="Event, day, celebration...">
@@ -29,13 +29,13 @@
         </div>
     </div>
 
-    <main>
-        <header class="hidden">
+    <main class="counter hidden">
+        <header>
             <h1>- countdown to -</h1>
-            <h2 id="event.display">PATINS</h2>
+            <h2 id="event-title">PATINS</h2>
         </header>
         <main>
-            <section class="countdown-container hidden">
+            <section class="countdown-container">
                 <div class="number-container">
                     <p class="big-number" id="days">0</p>
                     <span>Days</span>
