@@ -9,9 +9,16 @@ function save(event){
     formDate = document.getElementById('date').value
 
     //2 - check if all the inputs were filled
-    if(formEvent === "" || formDate === "") {
-        alert("Por favor preencha todos os campos")
-        return /*ARRUMAR*/
+
+    try {
+        if(formEvent === "" && formDate === "") throw "an Event and a Date";
+        if(formEvent === "") throw "an Event";
+        if(formDate === "") throw "a Date";
+    }
+
+    catch (err) {
+        window.alert(`Please choose ${err}`)
+        return
     }
 
     //3 - tranfer the data for the html and js
