@@ -4,14 +4,13 @@ function countdown() {
     //1 - define a final date
     let date = new Date(formDate)
 
-    // //2 - get current date
+    //2 - get current date
     const currentDate = new Date()
 
     //3 - calculate remaining time
     const result = date-currentDate
     
-
-    //4- transform milisconds into days, hours, minutes and seconds
+    //4- transform millisconds into days, hours, minutes and seconds
     const totalseconds = parseInt(result/1000)
     const seconds = parseInt(totalseconds) % 60
     const minutes = parseInt(totalseconds/60) % 60
@@ -23,7 +22,6 @@ function countdown() {
     document.getElementById('hours').innerHTML = hours
     document.getElementById('minutes').innerHTML = minutes
     document.getElementById('seconds').innerHTML = seconds
-
 }
 
 function save(event){
@@ -58,8 +56,7 @@ function save(event){
 
 }
 
-setInterval(countdown, 1000); //Isso aqui vai repetir uma função em determinado intervalo de tempo, entre parenteses, primeiro vai o nome da função e depois o intervalo de tempo em milissegundos.(1000milissegundos = 1seg)
-
+setInterval(countdown, 1000); //This line of code will repete certain function in a determined time interval. Inside the parentheses, first goes the function name and then goes the time frame in miliseconds (1000milliseconds = 1sec).
 
 
 
